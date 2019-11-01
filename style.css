@@ -1,27 +1,52 @@
 *{
     margin: 0;padding: 0;
 }
+body{
+    background:url(./wall.jpg) no-repeat center center;
+    background-size: cover;
+    
+    
+}
+main{
+    height: 100vh;
+    text-align: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
 a{
     text-decoration: none;
 }
 kbd{
     border: 1px solid red;
-    width: 4em;
-    height: 4em;
+    width: 6em;
+    height: 6em;
     display: inline-block;
     text-align: center;
     text-transform: uppercase;
     position: relative;
 }
-#keyboard >div:nth-child(2){
-    margin-left: 2em;
+#keyboard >div:nth-child(1)>kbd:nth-child(1){
+    width: 84px;
 }
-#keyboard >div:nth-child(3){
-    margin-left: 4em;
+#keyboard >div:nth-child(1)>kbd:nth-child(14){
+    width: 84px;
+}
+#keyboard >div:nth-child(2)>kbd:nth-child(1){
+    width: 112px;
+}
+#keyboard >div:nth-child(2)>kbd:nth-child(13){
+    width: 118px;
+}
+#keyboard >div:nth-child(3)>kbd:nth-child(1){
+    width: 134px;
+}
+#keyboard >div:nth-child(3)>kbd:nth-child(12){
+    width: 157px;
 }
 #keyboard{
+    display: inline-block;
     
-    text-align: center;
 }
 kbd>button{
     display: none;
@@ -31,4 +56,28 @@ kbd>button{
 }
 kbd:hover>button{
     display: inline-block;
+}
+.key{
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(to bottom,#363636 0%,#050505 100%);
+    color: rgb(228, 228, 228);
+    border: none;
+    box-shadow: 0 0 0 1px #1a1b1c, 0  0 2px #1f2020;
+    border-radius: 3px;
+    margin: 5px;
+    font-family: Helvetica;
+    position: relative;
+} 
+.key img{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: 2px;
+    left: 4px;
+}
+kbd span{
+    position: absolute;
+    top: 2px;
+    left: 4px;
 }
